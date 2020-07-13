@@ -1,13 +1,14 @@
-import { withStyles } from '@material-ui/styles'
-import MainScreen from './MainScreen'
+import { withStyles } from "@material-ui/styles";
+import MainScreen from "./MainScreen";
 
-const styles = theme => {
+const styles = (theme) => {
   return {
     root: {
-      backgroundColor: theme.colors.darkGray2,
-      minHeight: '100vh'
-    }
-  }
-}
+      backgroundColor: "white",
+      minHeight: "calc(100vh - 64px)",
+      marginTop: " 64px",
+    },
+  };
+};
 
-export default withStyles(styles)(MainScreen)
+export default withStyles(styles)(MainScreen);

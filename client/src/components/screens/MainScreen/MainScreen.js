@@ -1,29 +1,21 @@
-import React from 'react'
-import UpcomingMovies from '../UpcomingMovies'
-import MovieDetails from '../MovieDetails'
-import { Switch, Route } from 'react-router-dom'
+import React from "react";
+import CraftingTool from "../CraftingTool";
+import { Switch, Route } from "react-router-dom";
 
-const MainsScreen = ({ classes, tmdbConfigIsloading, tmdbConfig }) => {
-  if (tmdbConfigIsloading) return null
-
+const MainsScreen = ({ classes }) => {
   return (
     <div className={classes.root}>
       <Switch>
-        <Route
-          exact path='/' render={props => (
-            <UpcomingMovies {...props} baseUrl={tmdbConfig.images.base_url} />
+        <Route exact path="/" render={(props) => <CraftingTool {...props} />} />
+        {/* <Route
+          path="/movie/details/:id?"
+          render={(props) => (
+            <MovieDetails {...props} />
           )}
-        />
-        <Route
-          path='/movie/details/:id?' render={props => (
-            <MovieDetails {...props} baseUrl={tmdbConfig.images.base_url} />
-          )}
-        />
-        )}
-      />
+        /> */}
       </Switch>
     </div>
-  )
-}
+  );
+};
 
-export default MainsScreen
+export default MainsScreen;
