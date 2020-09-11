@@ -10,11 +10,9 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "public")));
 
-const movieRoutes = require("./routes/movie");
-const configurationRoutes = require("./routes/configuration");
+const craftingRoutes = require("./routes/crafting");
 
-app.use(movieRoutes);
-app.use(configurationRoutes);
+app.use(craftingRoutes);
 
 if (process.env.NODE_ENV === "production") {
   // Exprees will serve up production assets

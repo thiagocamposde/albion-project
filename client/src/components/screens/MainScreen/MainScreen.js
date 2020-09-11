@@ -7,12 +7,6 @@ const MainsScreen = ({ classes }) => {
     <div className={classes.root}>
       <Switch>
         <Route exact path="/" render={(props) => <CraftingTool {...props} />} />
-        {/* <Route
-          path="/movie/details/:id?"
-          render={(props) => (
-            <MovieDetails {...props} />
-          )}
-        /> */}
       </Switch>
     </div>
   );
